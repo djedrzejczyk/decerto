@@ -1,0 +1,21 @@
+
+source:
+  generator:
+    min: -100
+    max: 100
+  api.random-org:
+    url: https://api.random.org/json-rpc/2/invoke
+    api-key: 044e25b6-3d66-4602-952f-da6ed881a476
+    numbers-per-request: 10
+    min: -100
+    max: 100
+    bits-limit: 250000
+    requests-limit: 1000
+    limit-alert-threshold: 20
+
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 1000
+        readTimeout: 1000
